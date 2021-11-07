@@ -86,7 +86,13 @@
 		3E82AF8327380E0800E794E0 = {
 			isa = PBXGroup;
 			children = (
-				3E82AF8827380E0900E794E0 /* Shared */,
+				3E82AFCA273815D000E794E0 /* Utils */,
+				3E82AFC92738157600E794E0 /* Core */,
+				3E82AFC82738156300E794E0 /* Presentation */,
+				3E82AFC72738155A00E794E0 /* Domain */,
+				3E82AFC62738155100E794E0 /* Data */,
+				3E82AFC52738154400E794E0 /* App */,
+				3E82AF8827380E0900E794E0 /* Resources */,
 				3E82AF9727380E0C00E794E0 /* macOS */,
 				3E82AFA027380E0C00E794E0 /* Tests iOS */,
 				3E82AFAC27380E0C00E794E0 /* Tests macOS */,
@@ -94,14 +100,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		3E82AF8827380E0900E794E0 /* Shared */ = {
+		3E82AF8827380E0900E794E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AF8927380E0900E794E0 /* DashApp.swift */,
-				3E82AF8A27380E0900E794E0 /* ContentView.swift */,
 				3E82AF8B27380E0B00E794E0 /* Assets.xcassets */,
 			);
-			path = Shared;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3E82AF9127380E0B00E794E0 /* Products */ = {
@@ -139,6 +143,50 @@
 				3E82AFAF27380E0C00E794E0 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		3E82AFC52738154400E794E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AF8927380E0900E794E0 /* DashApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3E82AFC62738155100E794E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3E82AFC72738155A00E794E0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3E82AFC82738156300E794E0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AF8A27380E0900E794E0 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3E82AFC92738157600E794E0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3E82AFCA273815D000E794E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

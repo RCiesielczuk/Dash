@@ -12,10 +12,10 @@
 		3E82AFB127380E0C00E794E0 /* DashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8927380E0900E794E0 /* DashApp.swift */; };
 		3E82AFB327380E0C00E794E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8A27380E0900E794E0 /* ContentView.swift */; };
 		3E82AFB527380E0C00E794E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E82AF8B27380E0B00E794E0 /* Assets.xcassets */; };
-		3E82AFCC273816C100E794E0 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCB273816C100E794E0 /* dummy.swift */; };
-		3E82AFCE273816CC00E794E0 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCD273816CC00E794E0 /* dummy.swift */; };
-		3E82AFD0273816D200E794E0 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCF273816D200E794E0 /* dummy.swift */; };
-		3E82AFD2273816DC00E794E0 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD1273816DC00E794E0 /* dummy.swift */; };
+		3E82AFCC273816C100E794E0 /* Utilsdummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCB273816C100E794E0 /* Utilsdummy.swift */; };
+		3E82AFCE273816CC00E794E0 /* DomainDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCD273816CC00E794E0 /* DomainDummy.swift */; };
+		3E82AFD0273816D200E794E0 /* DataDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCF273816D200E794E0 /* DataDummy.swift */; };
+		3E82AFD2273816DC00E794E0 /* CoreDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD1273816DC00E794E0 /* CoreDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,10 @@
 		3E82AF9D27380E0C00E794E0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		3E82AFCB273816C100E794E0 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		3E82AFCD273816CC00E794E0 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		3E82AFCF273816D200E794E0 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
-		3E82AFD1273816DC00E794E0 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
+		3E82AFCB273816C100E794E0 /* Utilsdummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilsdummy.swift; sourceTree = "<group>"; };
+		3E82AFCD273816CC00E794E0 /* DomainDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDummy.swift; sourceTree = "<group>"; };
+		3E82AFCF273816D200E794E0 /* DataDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDummy.swift; sourceTree = "<group>"; };
+		3E82AFD1273816DC00E794E0 /* CoreDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		3E82AFC62738155100E794E0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCF273816D200E794E0 /* dummy.swift */,
+				3E82AFCF273816D200E794E0 /* DataDummy.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 		3E82AFC72738155A00E794E0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCD273816CC00E794E0 /* dummy.swift */,
+				3E82AFCD273816CC00E794E0 /* DomainDummy.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 		3E82AFC92738157600E794E0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFD1273816DC00E794E0 /* dummy.swift */,
+				3E82AFD1273816DC00E794E0 /* CoreDummy.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -144,7 +144,7 @@
 		3E82AFCA273815D000E794E0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCB273816C100E794E0 /* dummy.swift */,
+				3E82AFCB273816C100E794E0 /* Utilsdummy.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -249,10 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E82AFB327380E0C00E794E0 /* ContentView.swift in Sources */,
-				3E82AFD0273816D200E794E0 /* dummy.swift in Sources */,
-				3E82AFCC273816C100E794E0 /* dummy.swift in Sources */,
-				3E82AFCE273816CC00E794E0 /* dummy.swift in Sources */,
-				3E82AFD2273816DC00E794E0 /* dummy.swift in Sources */,
+				3E82AFD0273816D200E794E0 /* DataDummy.swift in Sources */,
+				3E82AFCC273816C100E794E0 /* Utilsdummy.swift in Sources */,
+				3E82AFCE273816CC00E794E0 /* DomainDummy.swift in Sources */,
+				3E82AFD2273816DC00E794E0 /* CoreDummy.swift in Sources */,
 				3E82AFB127380E0C00E794E0 /* DashApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

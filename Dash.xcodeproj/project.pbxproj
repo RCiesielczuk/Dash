@@ -9,14 +9,9 @@
 /* Begin PBXBuildFile section */
 		3E82AFA227380E0C00E794E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */; };
 		3E82AFA427380E0C00E794E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */; };
-		3E82AFAE27380E0C00E794E0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFAD27380E0C00E794E0 /* Tests_macOS.swift */; };
-		3E82AFB027380E0C00E794E0 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFAF27380E0C00E794E0 /* Tests_macOSLaunchTests.swift */; };
 		3E82AFB127380E0C00E794E0 /* DashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8927380E0900E794E0 /* DashApp.swift */; };
-		3E82AFB227380E0C00E794E0 /* DashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8927380E0900E794E0 /* DashApp.swift */; };
 		3E82AFB327380E0C00E794E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8A27380E0900E794E0 /* ContentView.swift */; };
-		3E82AFB427380E0C00E794E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8A27380E0900E794E0 /* ContentView.swift */; };
 		3E82AFB527380E0C00E794E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E82AF8B27380E0B00E794E0 /* Assets.xcassets */; };
-		3E82AFB627380E0C00E794E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E82AF8B27380E0B00E794E0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +22,6 @@
 			remoteGlobalIDString = 3E82AF8F27380E0B00E794E0;
 			remoteInfo = "Dash (iOS)";
 		};
-		3E82AFAA27380E0C00E794E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E82AF8427380E0800E794E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E82AF9527380E0C00E794E0;
-			remoteInfo = "Dash (macOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -41,25 +29,13 @@
 		3E82AF8A27380E0900E794E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E82AF8B27380E0B00E794E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E82AF9027380E0B00E794E0 /* Dash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dash.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E82AF9627380E0C00E794E0 /* Dash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dash.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E82AF9827380E0C00E794E0 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		3E82AF9D27380E0C00E794E0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		3E82AFA927380E0C00E794E0 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E82AFAD27380E0C00E794E0 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		3E82AFAF27380E0C00E794E0 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3E82AF8D27380E0B00E794E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E82AF9327380E0C00E794E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,29 +49,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E82AFA627380E0C00E794E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		3E82AF8327380E0800E794E0 = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCA273815D000E794E0 /* Utils */,
-				3E82AFC92738157600E794E0 /* Core */,
-				3E82AFC82738156300E794E0 /* Presentation */,
-				3E82AFC72738155A00E794E0 /* Domain */,
-				3E82AFC62738155100E794E0 /* Data */,
 				3E82AFC52738154400E794E0 /* App */,
+				3E82AFC92738157600E794E0 /* Core */,
+				3E82AFC62738155100E794E0 /* Data */,
+				3E82AFC72738155A00E794E0 /* Domain */,
+				3E82AFC82738156300E794E0 /* Presentation */,
 				3E82AF8827380E0900E794E0 /* Resources */,
-				3E82AF9727380E0C00E794E0 /* macOS */,
-				3E82AFA027380E0C00E794E0 /* Tests iOS */,
-				3E82AFAC27380E0C00E794E0 /* Tests macOS */,
+				3E82AFCA273815D000E794E0 /* Utils */,
+				3E82AFA027380E0C00E794E0 /* Tests */,
 				3E82AF9127380E0B00E794E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,37 +79,18 @@
 			isa = PBXGroup;
 			children = (
 				3E82AF9027380E0B00E794E0 /* Dash.app */,
-				3E82AF9627380E0C00E794E0 /* Dash.app */,
 				3E82AF9D27380E0C00E794E0 /* Tests iOS.xctest */,
-				3E82AFA927380E0C00E794E0 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E82AF9727380E0C00E794E0 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E82AF9827380E0C00E794E0 /* macOS.entitlements */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		3E82AFA027380E0C00E794E0 /* Tests iOS */ = {
+		3E82AFA027380E0C00E794E0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */,
 				3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */,
 			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		3E82AFAC27380E0C00E794E0 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E82AFAD27380E0C00E794E0 /* Tests_macOS.swift */,
-				3E82AFAF27380E0C00E794E0 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		3E82AFC52738154400E794E0 /* App */ = {
@@ -209,23 +157,6 @@
 			productReference = 3E82AF9027380E0B00E794E0 /* Dash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3E82AF9527380E0C00E794E0 /* Dash (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E82AFBC27380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Dash (macOS)" */;
-			buildPhases = (
-				3E82AF9227380E0C00E794E0 /* Sources */,
-				3E82AF9327380E0C00E794E0 /* Frameworks */,
-				3E82AF9427380E0C00E794E0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Dash (macOS)";
-			productName = "Dash (macOS)";
-			productReference = 3E82AF9627380E0C00E794E0 /* Dash.app */;
-			productType = "com.apple.product-type.application";
-		};
 		3E82AF9C27380E0C00E794E0 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E82AFBF27380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
@@ -244,24 +175,6 @@
 			productReference = 3E82AF9D27380E0C00E794E0 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		3E82AFA827380E0C00E794E0 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E82AFC227380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				3E82AFA527380E0C00E794E0 /* Sources */,
-				3E82AFA627380E0C00E794E0 /* Frameworks */,
-				3E82AFA727380E0C00E794E0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3E82AFAB27380E0C00E794E0 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 3E82AFA927380E0C00E794E0 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,16 +188,9 @@
 					3E82AF8F27380E0B00E794E0 = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					3E82AF9527380E0C00E794E0 = {
-						CreatedOnToolsVersion = 13.1;
-					};
 					3E82AF9C27380E0C00E794E0 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 3E82AF8F27380E0B00E794E0;
-					};
-					3E82AFA827380E0C00E794E0 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = 3E82AF9527380E0C00E794E0;
 					};
 				};
 			};
@@ -302,9 +208,7 @@
 			projectRoot = "";
 			targets = (
 				3E82AF8F27380E0B00E794E0 /* Dash (iOS) */,
-				3E82AF9527380E0C00E794E0 /* Dash (macOS) */,
 				3E82AF9C27380E0C00E794E0 /* Tests iOS */,
-				3E82AFA827380E0C00E794E0 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -318,22 +222,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E82AF9427380E0C00E794E0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E82AFB627380E0C00E794E0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3E82AF9B27380E0C00E794E0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E82AFA727380E0C00E794E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,30 +241,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E82AF9227380E0C00E794E0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E82AFB427380E0C00E794E0 /* ContentView.swift in Sources */,
-				3E82AFB227380E0C00E794E0 /* DashApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3E82AF9927380E0C00E794E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3E82AFA427380E0C00E794E0 /* Tests_iOSLaunchTests.swift in Sources */,
 				3E82AFA227380E0C00E794E0 /* Tests_iOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E82AFA527380E0C00E794E0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E82AFB027380E0C00E794E0 /* Tests_macOSLaunchTests.swift in Sources */,
-				3E82AFAE27380E0C00E794E0 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,11 +257,6 @@
 			isa = PBXTargetDependency;
 			target = 3E82AF8F27380E0B00E794E0 /* Dash (iOS) */;
 			targetProxy = 3E82AF9E27380E0C00E794E0 /* PBXContainerItemProxy */;
-		};
-		3E82AFAB27380E0C00E794E0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3E82AF9527380E0C00E794E0 /* Dash (macOS) */;
-			targetProxy = 3E82AFAA27380E0C00E794E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -567,62 +433,6 @@
 			};
 			name = Release;
 		};
-		3E82AFBD27380E0C00E794E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 689LP6M85U;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafi.Dash;
-				PRODUCT_NAME = Dash;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		3E82AFBE27380E0C00E794E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 689LP6M85U;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rafi.Dash;
-				PRODUCT_NAME = Dash;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		3E82AFC027380E0C00E794E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -674,56 +484,6 @@
 			};
 			name = Release;
 		};
-		3E82AFC327380E0C00E794E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 689LP6M85U;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rafi.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Dash (macOS)";
-			};
-			name = Debug;
-		};
-		3E82AFC427380E0C00E794E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 689LP6M85U;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rafi.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Dash (macOS)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -745,29 +505,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E82AFBC27380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Dash (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E82AFBD27380E0C00E794E0 /* Debug */,
-				3E82AFBE27380E0C00E794E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3E82AFBF27380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E82AFC027380E0C00E794E0 /* Debug */,
 				3E82AFC127380E0C00E794E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3E82AFC227380E0C00E794E0 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E82AFC327380E0C00E794E0 /* Debug */,
-				3E82AFC427380E0C00E794E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

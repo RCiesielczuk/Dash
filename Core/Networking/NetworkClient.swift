@@ -4,7 +4,7 @@ import Combine
 public final class NetworkClient: NetworkClientProtocol {
     private let session: URLSession
     
-    public init(session: URLSession?) {
+    public init(session: URLSession? = nil) {
         self.session = session ?? URLSession(configuration: .default)
     }
     

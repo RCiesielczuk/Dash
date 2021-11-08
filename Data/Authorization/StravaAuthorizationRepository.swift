@@ -3,19 +3,25 @@ import Foundation
 import AuthenticationServices
 
 protocol StravaAuthorizationRepositoryProtocol {
-    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<String, Error>
+    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaToken, Error>
 }
 
 enum StravaAuthorizationError: Error {
+    case authorization(Error)
     case missingUrlAfterAuthorization
+    case missingCode
 }
 
 final class StravaAuthorizationRepository: StravaAuthorizationRepositoryProtocol {
     private let config: StravaConfig
-    private let authenticationSession: WebAuthenticationSessionFactory
+    private let networkingProvider: NetworkingProvider<StravaAuthorizationEndpoint>
+    private let authenticationSession: StravaWebAuthenticationSessionFactory
     
-    init(config: StravaConfig, authenticationSession: WebAuthenticationSessionFactory? = nil) {
+    init(config: StravaConfig,
+         networkingProvider: NetworkingProvider<StravaAuthorizationEndpoint>,
+         authenticationSession: StravaWebAuthenticationSessionFactory? = nil) {
         self.config = config
+        self.networkingProvider = networkingProvider
         
         if let authenticationSession = authenticationSession {
             self.authenticationSession = authenticationSession
@@ -26,32 +32,35 @@ final class StravaAuthorizationRepository: StravaAuthorizationRepositoryProtocol
         }
     }
     
-    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<String, Error> {
-        getCode(contextProvider).flatMap { [self] in getAuthToken($0) }.eraseToAnyPublisher()
+    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaToken, Error> {
+        getCode(contextProvider).flatMap(self.getAuthToken).eraseToAnyPublisher()
     }
     
-    private func getCode(_ contextProvider: ASWebAuthenticationPresentationContextProviding) -> Future<URL, Error> {
-        return Future<URL, Error> { promise in
+    private func getCode(_ contextProvider: ASWebAuthenticationPresentationContextProviding) -> Future<String, Error> {
+        return Future<String, Error> { promise in
             let session = self.authenticationSession(self.buildUrl(), "runner-dash") { (url, error) in
                 if let error = error {
-                    promise(.failure(error))
+                    promise(.failure(StravaAuthorizationError.authorization(error)))
                     return
                 }
                 guard let url = url else {
                     promise(.failure(StravaAuthorizationError.missingUrlAfterAuthorization))
                     return
                 }
-                promise(.success(url))
+                guard let code = URLComponents(string: url.absoluteString)?.queryItems?.first(where: { $0.name == "code" })?.value else {
+                    promise(.failure(StravaAuthorizationError.missingCode))
+                    return
+                }
+                promise(.success(code))
             }
             session.presentationContextProvider = contextProvider
             session.start()
         }
     }
     
-    private func getAuthToken(_ url: URL) -> Future<String, Error> {
-        return Future<String, Error> { promise in
-            promise(.success("RESULT IS: \(url.absoluteString)"))
-        }
+    private func getAuthToken(_ code: String) -> AnyPublisher<StravaToken, Error> {
+        let params = StravaRequestTokenParams(id: config.clientId, secret: config.clientSecret, code: code)
+        return networkingProvider.execute(.token(params)).eraseToAnyPublisher()
     }
     
     private func buildUrl() -> URL {

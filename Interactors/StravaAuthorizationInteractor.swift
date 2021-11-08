@@ -3,7 +3,7 @@ import Foundation
 import AuthenticationServices
 
 protocol StravaAuthorizationInteractorProtocol {
-    func signIn()
+    func authorize()
 }
 
 final class StravaAuthorizationInteractor: NSObject, StravaAuthorizationInteractorProtocol {
@@ -14,16 +14,21 @@ final class StravaAuthorizationInteractor: NSObject, StravaAuthorizationInteract
         self.repository = repository
     }
     
-    public func signIn() {
-        repository.getAuthorization(with: self).sink { error in
-            print(error)
-        } receiveValue: { url in
-            self.processResponseUrl(url)
+    public func authorize() {
+        repository.getAuthorization(with: self).sink { result in
+            switch result {
+            case .failure(let error):
+                print("ERROR is: \(error)")
+            case .finished:
+                print("FINISHED")
+            }
+        } receiveValue: { token in
+            self.processResponseUrl(token)
         }.store(in: &subscriptions)
     }
     
-    private func processResponseUrl(_ url: String) {
-        print("completion: \(url)")
+    private func processResponseUrl(_ token: StravaToken) {
+        print("completion: \(token)")
     }
 }
 

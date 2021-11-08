@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E383AC727391974004B24E0 /* WebAuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E383AC627391974004B24E0 /* WebAuthenticationSession.swift */; };
 		3E82AFA227380E0C00E794E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */; };
 		3E82AFA427380E0C00E794E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */; };
 		3E82AFB127380E0C00E794E0 /* DashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8927380E0900E794E0 /* DashApp.swift */; };
 		3E82AFB327380E0C00E794E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AF8A27380E0900E794E0 /* ContentView.swift */; };
 		3E82AFB527380E0C00E794E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E82AF8B27380E0B00E794E0 /* Assets.xcassets */; };
-		3E82AFCC273816C100E794E0 /* Utilsdummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCB273816C100E794E0 /* Utilsdummy.swift */; };
 		3E82AFCE273816CC00E794E0 /* DomainDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCD273816CC00E794E0 /* DomainDummy.swift */; };
-		3E82AFD0273816D200E794E0 /* DataDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFCF273816D200E794E0 /* DataDummy.swift */; };
-		3E82AFD2273816DC00E794E0 /* CoreDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD1273816DC00E794E0 /* CoreDummy.swift */; };
 		3E82AFD527381B9E00E794E0 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD427381B9E00E794E0 /* Endpoint.swift */; };
 		3E82AFD727381BB400E794E0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD627381BB400E794E0 /* HTTPMethod.swift */; };
 		3E82AFD92738357800E794E0 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFD82738357800E794E0 /* NetworkRequest.swift */; };
@@ -24,6 +22,12 @@
 		3E82AFDF27386E1700E794E0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFDE27386E1700E794E0 /* NetworkError.swift */; };
 		3E82AFE127386EAD00E794E0 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFE027386EAD00E794E0 /* NetworkClient.swift */; };
 		3E82AFE3273875AE00E794E0 /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFE2273875AE00E794E0 /* NetworkingProvider.swift */; };
+		3E82AFE727387A9600E794E0 /* StravaAuthorizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFE627387A9600E794E0 /* StravaAuthorizationRepository.swift */; };
+		3E82AFEA27387AC300E794E0 /* StravaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFE927387AC300E794E0 /* StravaConfig.swift */; };
+		3E82AFED27387DE500E794E0 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E82AFEC27387DE400E794E0 /* AuthenticationServices.framework */; };
+		3E82AFEF273881D600E794E0 /* StravaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFEE273881D600E794E0 /* StravaConstants.swift */; };
+		3E82AFF12738875D00E794E0 /* DashAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFF02738875D00E794E0 /* DashAppDelegate.swift */; };
+		3E82AFF42738907C00E794E0 /* StravaAuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E82AFF32738907C00E794E0 /* StravaAuthorizationInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E383AC627391974004B24E0 /* WebAuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAuthenticationSession.swift; sourceTree = "<group>"; };
 		3E82AF8927380E0900E794E0 /* DashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashApp.swift; sourceTree = "<group>"; };
 		3E82AF8A27380E0900E794E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E82AF8B27380E0B00E794E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,10 +49,7 @@
 		3E82AF9D27380E0C00E794E0 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E82AFA127380E0C00E794E0 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		3E82AFA327380E0C00E794E0 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		3E82AFCB273816C100E794E0 /* Utilsdummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilsdummy.swift; sourceTree = "<group>"; };
 		3E82AFCD273816CC00E794E0 /* DomainDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDummy.swift; sourceTree = "<group>"; };
-		3E82AFCF273816D200E794E0 /* DataDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDummy.swift; sourceTree = "<group>"; };
-		3E82AFD1273816DC00E794E0 /* CoreDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDummy.swift; sourceTree = "<group>"; };
 		3E82AFD427381B9E00E794E0 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3E82AFD627381BB400E794E0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3E82AFD82738357800E794E0 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -56,6 +58,12 @@
 		3E82AFDE27386E1700E794E0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		3E82AFE027386EAD00E794E0 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3E82AFE2273875AE00E794E0 /* NetworkingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		3E82AFE627387A9600E794E0 /* StravaAuthorizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuthorizationRepository.swift; sourceTree = "<group>"; };
+		3E82AFE927387AC300E794E0 /* StravaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaConfig.swift; sourceTree = "<group>"; };
+		3E82AFEC27387DE400E794E0 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/AuthenticationServices.framework; sourceTree = DEVELOPER_DIR; };
+		3E82AFEE273881D600E794E0 /* StravaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaConstants.swift; sourceTree = "<group>"; };
+		3E82AFF02738875D00E794E0 /* DashAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashAppDelegate.swift; sourceTree = "<group>"; };
+		3E82AFF32738907C00E794E0 /* StravaAuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaAuthorizationInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E82AFED27387DE500E794E0 /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +92,13 @@
 				3E82AFC92738157600E794E0 /* Core */,
 				3E82AFC62738155100E794E0 /* Data */,
 				3E82AFC72738155A00E794E0 /* Domain */,
-				3E82AFC82738156300E794E0 /* Presentation */,
+				3E82AFF227388F6800E794E0 /* Interactors */,
+				3E82AFC82738156300E794E0 /* UI */,
 				3E82AF8827380E0900E794E0 /* Resources */,
 				3E82AFCA273815D000E794E0 /* Utils */,
 				3E82AFA027380E0C00E794E0 /* Tests */,
 				3E82AF9127380E0B00E794E0 /* Products */,
+				3E82AFEB27387DE400E794E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3E82AF8927380E0900E794E0 /* DashApp.swift */,
+				3E82AFF02738875D00E794E0 /* DashAppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -128,7 +140,7 @@
 		3E82AFC62738155100E794E0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCF273816D200E794E0 /* DataDummy.swift */,
+				3E82AFE527387A4700E794E0 /* Authorization */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -141,19 +153,18 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		3E82AFC82738156300E794E0 /* Presentation */ = {
+		3E82AFC82738156300E794E0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				3E82AF8A27380E0900E794E0 /* ContentView.swift */,
 			);
-			path = Presentation;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		3E82AFC92738157600E794E0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				3E82AFD327381ABE00E794E0 /* Networking */,
-				3E82AFD1273816DC00E794E0 /* CoreDummy.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -161,7 +172,7 @@
 		3E82AFCA273815D000E794E0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3E82AFCB273816C100E794E0 /* Utilsdummy.swift */,
+				3E82AFE827387AB100E794E0 /* Strava */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -179,6 +190,40 @@
 				3E82AFE2273875AE00E794E0 /* NetworkingProvider.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		3E82AFE527387A4700E794E0 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AFE627387A9600E794E0 /* StravaAuthorizationRepository.swift */,
+				3E82AFE927387AC300E794E0 /* StravaConfig.swift */,
+				3E383AC627391974004B24E0 /* WebAuthenticationSession.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		3E82AFE827387AB100E794E0 /* Strava */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AFEE273881D600E794E0 /* StravaConstants.swift */,
+			);
+			path = Strava;
+			sourceTree = "<group>";
+		};
+		3E82AFEB27387DE400E794E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AFEC27387DE400E794E0 /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E82AFF227388F6800E794E0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				3E82AFF32738907C00E794E0 /* StravaAuthorizationInteractor.swift */,
+			);
+			path = Interactors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,12 +326,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E82AFD527381B9E00E794E0 /* Endpoint.swift in Sources */,
+				3E82AFEF273881D600E794E0 /* StravaConstants.swift in Sources */,
 				3E82AFB327380E0C00E794E0 /* ContentView.swift in Sources */,
-				3E82AFD0273816D200E794E0 /* DataDummy.swift in Sources */,
-				3E82AFCC273816C100E794E0 /* Utilsdummy.swift in Sources */,
+				3E82AFE727387A9600E794E0 /* StravaAuthorizationRepository.swift in Sources */,
+				3E82AFEA27387AC300E794E0 /* StravaConfig.swift in Sources */,
 				3E82AFD727381BB400E794E0 /* HTTPMethod.swift in Sources */,
+				3E82AFF12738875D00E794E0 /* DashAppDelegate.swift in Sources */,
+				3E82AFF42738907C00E794E0 /* StravaAuthorizationInteractor.swift in Sources */,
 				3E82AFCE273816CC00E794E0 /* DomainDummy.swift in Sources */,
-				3E82AFD2273816DC00E794E0 /* CoreDummy.swift in Sources */,
+				3E383AC727391974004B24E0 /* WebAuthenticationSession.swift in Sources */,
 				3E82AFD92738357800E794E0 /* NetworkRequest.swift in Sources */,
 				3E82AFE3273875AE00E794E0 /* NetworkingProvider.swift in Sources */,
 				3E82AFE127386EAD00E794E0 /* NetworkClient.swift in Sources */,
@@ -438,6 +486,7 @@
 				DEVELOPMENT_TEAM = 689LP6M85U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dash--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +517,7 @@
 				DEVELOPMENT_TEAM = 689LP6M85U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dash--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

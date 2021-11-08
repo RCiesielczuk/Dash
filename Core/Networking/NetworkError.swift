@@ -1,32 +1,28 @@
 import Foundation
 
-public enum NetworkConversionError: Error {
-    case emptyData
-    case stringConversionFailed
+public enum NetworkingProviderError: Error {
+    case couldNotBuildURLComponents(_ partialURL: URL)
+    case couldNotBuildURL(_ partialURL: URL, parameters: [String: String]?)
 }
 
 public enum NetworkError: Error {
-    case networkError(Error)
+    case request(Error)
     case noResponse
     case unexpectedStatusCode(Int)
-    case conversionFailed(Error, statusCode: Int?)
+    case conversionFailed(Error)
 }
 
 extension NetworkError: LocalizedError {
     public var errorDescription: String? {
         switch self {
-        case .networkError(let networkError):
-            return "A Network Error: \(networkError.localizedDescription)"
+        case .request(let networkError):
+            return "A Request Error: \(networkError.localizedDescription)"
         case .noResponse:
             return "No response from server."
         case .unexpectedStatusCode(let statusCode):
             return "Unexpected status code: \(statusCode)"
-        case .conversionFailed(let conversionError, let statusCode):
-            var result = "Conversion failed: \(conversionError.localizedDescription)"
-            if let statusCode = statusCode {
-                result.append(", response status code: \(statusCode)")
-            }
-            return result
+        case .conversionFailed(let conversionError):
+            return "Conversion failed: \(conversionError.localizedDescription)"
         }
     }
 }

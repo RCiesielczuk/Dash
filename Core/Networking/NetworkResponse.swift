@@ -41,3 +41,7 @@ public struct NetworkResponse<Value> {
         self.result = result
     }
 }
+
+struct NetworkResponseCombine<Wrapped: Decodable>: Decodable {
+    var result: Wrapped
+}

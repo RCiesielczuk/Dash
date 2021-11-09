@@ -3,7 +3,7 @@ import Foundation
 import AuthenticationServices
 
 protocol StravaAuthorizationRepositoryProtocol {
-    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaToken, Error>
+    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaAuthToken, Error>
 }
 
 enum StravaAuthorizationError: Error {
@@ -32,8 +32,12 @@ final class StravaAuthorizationRepository: StravaAuthorizationRepositoryProtocol
         }
     }
     
-    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaToken, Error> {
-        getCode(contextProvider).flatMap(self.getAuthToken).eraseToAnyPublisher()
+    func getAuthorization(with contextProvider: ASWebAuthenticationPresentationContextProviding) -> AnyPublisher<StravaAuthToken, Error> {
+        getCode(contextProvider)
+            .flatMap(self.getAuthToken)
+            .map { StravaAuthToken($0) }
+            .eraseToAnyPublisher()
+
     }
     
     private func getCode(_ contextProvider: ASWebAuthenticationPresentationContextProviding) -> Future<String, Error> {
@@ -58,7 +62,7 @@ final class StravaAuthorizationRepository: StravaAuthorizationRepositoryProtocol
         }
     }
     
-    private func getAuthToken(_ code: String) -> AnyPublisher<StravaToken, Error> {
+    private func getAuthToken(_ code: String) -> AnyPublisher<StravaResponseToken, Error> {
         let params = StravaRequestTokenParams(id: config.clientId, secret: config.clientSecret, code: code)
         return networkingProvider.execute(.token(params)).eraseToAnyPublisher()
     }

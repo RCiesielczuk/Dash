@@ -8,14 +8,18 @@ public final class NetworkClient: NetworkClientProtocol {
         self.session = session ?? URLSession(configuration: .default)
     }
     
-    public func send<T: Decodable>(_ request: NetworkRequest, decoder: JSONDecoder = .init()) -> AnyPublisher<T, Error> {
+    public func send<T: Decodable>(_ request: NetworkRequest, decoder: JSONDecoder = .init()) -> AnyPublisher<NetworkResponse<T>, Error> {
         return session.dataTaskPublisher(for: request.urlRequest)
             .mapError { NetworkError.request($0) }
             .map { $0.data }
-            .flatMap {
-                Just($0)
-                    .decode(type: T.self, decoder: decoder)
-                    .mapError { NetworkError.conversionFailed($0) }}
+            .tryMap { result -> NetworkResponse<T> in
+                do {
+                    let decodedResponse = try decoder.decode(T.self, from: result)
+                    return NetworkResponse(result: decodedResponse)
+                } catch {
+                    throw NetworkError.conversionFailed(error)
+                }
+            }
             .eraseToAnyPublisher()
     }
 }

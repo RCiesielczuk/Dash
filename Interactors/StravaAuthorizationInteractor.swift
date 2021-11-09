@@ -27,7 +27,7 @@ final class StravaAuthorizationInteractor: NSObject, StravaAuthorizationInteract
         }.store(in: &subscriptions)
     }
     
-    private func processResponseUrl(_ token: StravaToken) {
+    private func processResponseUrl(_ token: StravaAuthToken) {
         print("completion: \(token)")
     }
 }

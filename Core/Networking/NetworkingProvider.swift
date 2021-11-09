@@ -13,13 +13,28 @@ public class NetworkingProvider<E: Endpoint> {
     public func execute<T: Decodable>(_ endpoint: E) -> AnyPublisher<T, Error> {
         do {
             let request = try makeRequest(for: endpoint)
-            return networkClient.send(request, decoder: decoder).eraseToAnyPublisher()
+            return networkClient.send(request, decoder: decoder)
+                .map(\.result)
+                .eraseToAnyPublisher()
         } catch {
             return Fail(error: error).eraseToAnyPublisher()
         }
     }
     
     // MARK: Request Factory
+    
+    private func makeRequest(for endpoint: E) throws -> NetworkRequest {
+        let url = try makeURL(for: endpoint)
+        
+        let request: NetworkRequest = {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = endpoint.method.rawValue
+            urlRequest.allHTTPHeaderFields = endpoint.headers
+            return NetworkRequest(urlRequest: urlRequest)
+        }()
+        
+        return request
+    }
     
     private func makeURL(for endpoint: E) throws -> URL {
         let partialURL = (endpoint.baseURL).appendingPathComponent(endpoint.path)
@@ -38,18 +53,5 @@ public class NetworkingProvider<E: Endpoint> {
         }
 
         return url
-    }
-    
-    private func makeRequest(for endpoint: E) throws -> NetworkRequest {
-        let url = try makeURL(for: endpoint)
-        
-        let request: NetworkRequest = {
-            var urlRequest = URLRequest(url: url)
-            urlRequest.httpMethod = endpoint.method.rawValue
-            urlRequest.allHTTPHeaderFields = endpoint.headers
-            return NetworkRequest(urlRequest: urlRequest)
-        }()
-        
-        return request
     }
 }
